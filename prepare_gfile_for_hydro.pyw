@@ -124,8 +124,8 @@ for iz, z in enumerate(z_arr): # 读取$Z$ 轴方向上的网格坐标点, 返�
         print(f"  处理 Z 层 {iz}/{Z}")
     for ix, x in enumerate(x_arr):
         for iy, y in enumerate(y_arr):
-            R = np.sqrt(x**2 + y**2)
-            phi = np.arctan2(y, x)
+            R = np.sqrt(x**2 + y**2) # 径向距离 
+            phi = np.arctan2(y, x) # 环向角度
             point = np.array([z, R])   # (Z, R)
             br   = interp_BR(point)[0]
             bz   = interp_BZ(point)[0]
