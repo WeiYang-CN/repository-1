@@ -136,6 +136,7 @@ for iz, z in enumerate(z_arr): # 读取$Z$ 轴方向上的网格坐标点, 返�
             Bx = br * cos_p - bphi * sin_p
             By = br * sin_p + bphi * cos_p
             Bz = bz
+            # 不同网格索引对应的磁场在直角坐标下分量
             Bx_field[iz, ix, iy] = Bx
             By_field[iz, ix, iy] = By
             Bz_field[iz, ix, iy] = Bz
